@@ -43,13 +43,10 @@
     <feature name="SQLitePlugin">
         <param name="ios-package" value="SQLitePlugin" />
     </feature>
-    <feature name="QRScanner">
-        <param name="ios-package" value="QRScanner" />
-    </feature>
     <name>MyApp</name>
     <description>An ionic app to replace business cards</description>
     <author email="bradutegaard@gmail.com" href="http://bradutegaard.com">Brad Utegaard</author>
-    <content src="index.html" />
+    <content original-src="index.html" src="http://192.168.86.156:8100" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
@@ -60,6 +57,7 @@
     <edit-config file="*-Info.plist" mode="merge" target="NSCameraUsageDescription">
         <string>Used to take pictures</string>
     </edit-config>
+    <allow-navigation href="http://192.168.86.156:8100" sessionid="33c3f0c7" />
     <allow-intent href="itms:*" />
     <allow-intent href="itms-apps:*" />
     <icon height="57" src="resources/ios/icon/icon.png" width="57" />
@@ -132,4 +130,5 @@
     <preference name="SplashShowOnlyFirstTime" value="false" />
     <preference name="SplashScreen" value="screen" />
     <preference name="SplashScreenDelay" value="3000" />
+    <preference name="UseSwiftLanguageVersion" value="5" />
 </widget>

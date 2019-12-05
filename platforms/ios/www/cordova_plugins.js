@@ -87,14 +87,6 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
       "clobbers": [
         "SQLitePlugin"
       ]
-    },
-    {
-      "id": "cordova-plugin-qrscanner.QRScanner",
-      "file": "plugins/cordova-plugin-qrscanner/www/www.min.js",
-      "pluginId": "cordova-plugin-qrscanner",
-      "clobbers": [
-        "QRScanner"
-      ]
     }
   ];
   module.exports.metadata = {
@@ -105,8 +97,6 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
     "cordova-plugin-ionic-webview": "4.1.3",
     "cordova-plugin-ionic-keyboard": "2.2.0",
     "cordova-plugin-camera": "4.1.0",
-    "cordova-sqlite-storage": "3.4.0",
-    "cordova-plugin-add-swift-support": "2.0.2",
-    "cordova-plugin-qrscanner": "3.0.1"
+    "cordova-sqlite-storage": "3.4.0"
   };
 });

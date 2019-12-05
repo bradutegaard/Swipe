@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { QRScanService } from "../services/qrscan.service";
+import { PhotoService } from "../services/photo.service";
 
 @Component({
   selector: "app-tab2",
@@ -7,5 +7,5 @@ import { QRScanService } from "../services/qrscan.service";
   styleUrls: ["tab2.page.scss"]
 })
 export class Tab2Page {
-  constructor(public qrScanService: QRScanService) {}
+  constructor(private photoService: PhotoService) {}
 }

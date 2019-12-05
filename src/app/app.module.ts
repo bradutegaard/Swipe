@@ -11,7 +11,6 @@ import { AppComponent } from "./app.component";
 
 import { Camera } from "@ionic-native/camera/ngx";
 import { IonicStorageModule } from "@ionic/storage";
-import { QRScanner, QRScannerStatus } from "@ionic-native/qr-scanner/ngx";
 
 @NgModule({
   declarations: [AppComponent],
@@ -26,7 +25,6 @@ import { QRScanner, QRScannerStatus } from "@ionic-native/qr-scanner/ngx";
     StatusBar,
     SplashScreen,
     Camera,
-    QRScanner,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
