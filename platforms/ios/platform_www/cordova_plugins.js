@@ -87,6 +87,14 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
       "clobbers": [
         "SQLitePlugin"
       ]
+    },
+    {
+      "id": "phonegap-plugin-barcodescanner.BarcodeScanner",
+      "file": "plugins/phonegap-plugin-barcodescanner/www/barcodescanner.js",
+      "pluginId": "phonegap-plugin-barcodescanner",
+      "clobbers": [
+        "cordova.plugins.barcodeScanner"
+      ]
     }
   ];
   module.exports.metadata = {
@@ -97,6 +105,7 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
     "cordova-plugin-ionic-webview": "4.1.3",
     "cordova-plugin-ionic-keyboard": "2.2.0",
     "cordova-plugin-camera": "4.1.0",
-    "cordova-sqlite-storage": "3.4.0"
+    "cordova-sqlite-storage": "3.4.0",
+    "phonegap-plugin-barcodescanner": "8.1.0"
   };
 });

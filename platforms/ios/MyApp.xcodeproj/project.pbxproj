@@ -32,6 +32,10 @@
 		E328FAA577B547D0A03E664B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85550F1486E14A779C7385B8 /* CoreLocation.framework */; };
 		E33805CF49964849B0B1056F /* CDVStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E99E8CA54A54F2CB1DC94A9 /* CDVStatusBar.m */; };
 		F4A5CA8A4A3743668F9E1FA3 /* CDVWKProcessPoolFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 5323EFFB51604DC28303B87B /* CDVWKProcessPoolFactory.m */; };
+		F976F59156E147EB973FB498 /* CDVBarcodeScanner.mm in Resources */ = {isa = PBXBuildFile; fileRef = 382B85BC1E0A4D96AA295C76 /* CDVBarcodeScanner.mm */; };
+		D27284D24B734CC5811B727F /* scannerOverlay.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F574AEF39D545FE93CEF68B /* scannerOverlay.xib */; };
+		E1EEA7DF0C47476384528C39 /* CDVBarcodeScanner.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 02B5C58099BD44EE876D6627 /* CDVBarcodeScanner.bundle */; };
+		3156245E513A4E87AE0F9C0D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 604CCDEC15E34480B06DFF8B /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +118,10 @@
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = MyApp/config.xml; sourceTree = "<group>"; };
 		FAA901C8AAA0416AB1C6F8A2 /* ImageIO.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		FCE18E2F6A5B44688A5210D0 /* CDVViewController+SplashScreen.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = "CDVViewController+SplashScreen.m"; path = "cordova-plugin-splashscreen/CDVViewController+SplashScreen.m"; sourceTree = "<group>"; };
+		382B85BC1E0A4D96AA295C76 /* CDVBarcodeScanner.mm */ = {isa = PBXFileReference; name = "CDVBarcodeScanner.mm"; path = "phonegap-plugin-barcodescanner/CDVBarcodeScanner.mm"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3F574AEF39D545FE93CEF68B /* scannerOverlay.xib */ = {isa = PBXFileReference; name = "scannerOverlay.xib"; path = "scannerOverlay.xib"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = file.xib; explicitFileType = undefined; includeInIndex = 0; };
+		02B5C58099BD44EE876D6627 /* CDVBarcodeScanner.bundle */ = {isa = PBXFileReference; name = "CDVBarcodeScanner.bundle"; path = "CDVBarcodeScanner.bundle"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.plug-in; explicitFileType = undefined; includeInIndex = 0; };
+		604CCDEC15E34480B06DFF8B /* AudioToolbox.framework */ = {isa = PBXFileReference; name = "AudioToolbox.framework"; path = "System/Library/Frameworks/AudioToolbox.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +134,7 @@
 				B8E8B4A9CE0143D58CF5E992 /* ImageIO.framework in Frameworks */,
 				E328FAA577B547D0A03E664B /* CoreLocation.framework in Frameworks */,
 				9159B48F98784AE0B52EE2BC /* AVFoundation.framework in Frameworks */,
+				3156245E513A4E87AE0F9C0D /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,6 +197,8 @@
 				3047A50E1AB8057F00498E2A /* config */,
 				8D1107310486CEB800E47090 /* MyApp-Info.plist */,
 				6AFF5BF81D6E424B00AB3073 /* CDVLaunchScreen.storyboard */,
+				3F574AEF39D545FE93CEF68B /* scannerOverlay.xib */,
+				02B5C58099BD44EE876D6627 /* CDVBarcodeScanner.bundle */,
 			);
 			name = Resources;
 			path = MyApp/Resources;
@@ -200,6 +211,7 @@
 				FAA901C8AAA0416AB1C6F8A2 /* ImageIO.framework */,
 				85550F1486E14A779C7385B8 /* CoreLocation.framework */,
 				96C51A89749F4E1FB7EC2B82 /* AVFoundation.framework */,
+				604CCDEC15E34480B06DFF8B /* AudioToolbox.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -257,6 +269,7 @@
 				F0147CA18FA7424BA9771687 /* SQLitePlugin.h */,
 				493418B8D3E546E3A92ED162 /* PSPDFThreadSafeMutableDictionary.h */,
 				DA5A7FC115A345BF902D9AA8 /* sqlite3.h */,
+				382B85BC1E0A4D96AA295C76 /* CDVBarcodeScanner.mm */,
 			);
 			name = Plugins;
 			path = MyApp/Plugins;
@@ -356,6 +369,8 @@
 				302D95F214D2391D003F00A1 /* MainViewController.xib in Resources */,
 				0207DA581B56EA530066E2B4 /* Images.xcassets in Resources */,
 				6AFF5BF91D6E424B00AB3073 /* CDVLaunchScreen.storyboard in Resources */,
+				D27284D24B734CC5811B727F /* scannerOverlay.xib in Resources */,
+				E1EEA7DF0C47476384528C39 /* CDVBarcodeScanner.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,6 +417,7 @@
 				08F1015FDF3245BE9EB17855 /* SQLitePlugin.m in Sources */,
 				6B5B197DBFA04444B593FB70 /* PSPDFThreadSafeMutableDictionary.m in Sources */,
 				9E13460A7E814F9CAD69F8D2 /* sqlite3.c in Sources */,
+				F976F59156E147EB973FB498 /* CDVBarcodeScanner.mm in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
