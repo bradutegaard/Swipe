@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      {{myCard.title}}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngIf="(myCard | async)" lass="welcome-card">
+    <img src="{{myCard.imgPath}}" alt="" />
+    <ion-card-header>
+      <ion-card-title>{{myCard.name}}</ion-card-title>
+      <ion-card-subtitle>{{myCard.position}}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <p>
+        {{myCard.address}}
+      </p>
+      <p>
+        {{myCard.officePhone}}
+      </p>
+      <p>
+        {{myCard.directPhone}}
+      </p>
+      <p>
+        <a href="mailto:{{myCard.email}}">{{myCard.email}}</a>
+      </p>
+      <p>
+        <a href="{{myCard.website}}">{{myCard.website}}</a>
+      </p>
+    </ion-card-content>
+  </ion-card>
+
+  <ngx-qrcode [qrc-element-type]="elementType" [qrc-value]="myCard.website">
+  </ngx-qrcode>
+
+  <ion-button expand="full" (click)="scanCode()" color="primary">
+    <ion-icon name="qr-scanner"></ion-icon>
+    Scan Code
+  </ion-button>
+
+  <ion-card *ngIf="scannedCode">
+    <ion-card-content>
+      Result from scan: <a href="scannedCode"> {{ scannedCode }} </a>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
